@@ -28,5 +28,10 @@ namespace LojinhaV2.Models
 
         public string Pais { get; set; }
 
+        // complementar a informação sobre o relacionamento
+        // um cliente terá uma lista de encomendas e uma lista de reviews
+        public virtual ICollection<Encomendas> ListaDeEncomendas { get; set; }
+
+
     }
 }

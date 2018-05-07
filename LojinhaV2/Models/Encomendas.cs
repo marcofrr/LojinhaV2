@@ -27,5 +27,9 @@ namespace LojinhaV2.Models
         public int Cliente_id { get; set; }
         public virtual Cliente Cliente { get; set; }
 
+        // complementar a informação sobre o relacionamento
+        // uma encomenda ao longo do seu trajeto irá ter vários status
+        public virtual ICollection<Encomendas_status> ListaDeStatus { get; set; }
+
     }
 }

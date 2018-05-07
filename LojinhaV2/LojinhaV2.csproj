@@ -183,7 +183,6 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Encomendas.cs" />
     <Compile Include="Models\Encomendas_status.cs" />
-    <Compile Include="Models\ErrorViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\ErrorViewModel.cs" />
   </ItemGroup>
