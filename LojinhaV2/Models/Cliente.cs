@@ -15,11 +15,11 @@ namespace LojinhaV2.Models
             ListaDeReviews = new HashSet<Reviews>();
         }
         [Key]
-        public int Cliente_id { get; set; }
+        public int ClienteId { get; set; }
 
-        public string Primeiro_nome { get; set; }
+        public string PrimeiroNome { get; set; }
 
-        public string Ultimo_nome { get; set; }
+        public string UltimoNome { get; set; }
 
         public string Email { get; set; }
 
@@ -32,6 +32,8 @@ namespace LojinhaV2.Models
         public string Distrito { get; set; }
 
         public string Pais { get; set; }
+
+        public string CodigoPostal { get; set; }
 
         // complementar a informação sobre o relacionamento
         // um cliente terá uma lista de encomendas e uma lista de reviews

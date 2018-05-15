@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,19 +12,19 @@ namespace LojinhaV2.Models
 
 
         [Key]
-        public int Review_id { get; set; }
+        public int ReviewId { get; set; }
 
         public string Desc { get; set; }
 
-        public int Rating { get; set; }
+        public int? Rating { get; set; }
 
 
         [ForeignKey("Produtos")]
-        public int Produto_id { get; set; }
+        public int ProdutoId { get; set; }
         public virtual Produtos Produtos { get; set; }
 
         [ForeignKey("Cliente")]
-        public int Cliente_id { get; set; }
+        public int ClienteId { get; set; }
         public virtual Cliente Cliente { get; set; }
 
     }

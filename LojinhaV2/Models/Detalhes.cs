@@ -10,17 +10,17 @@ namespace LojinhaV2.Models
     public class Detalhes
     {   
         [Key]
-        public int Detalhes_id { get; set; }
+        public int DetalhesId { get; set; }
 
         [ForeignKey("Encomendas")]
-        public int Encomenda_id { get; set; }
+        public int EncomendaId { get; set; }
         public virtual Encomendas Encomendas { get; set; }
 
         public int Quantidade { get; set; }
 
 
         [ForeignKey("Produtos")]
-        public int Produto_id { get; set; }
+        public int ProdutoId { get; set; }
         public virtual Produtos Produtos { get; set; }
 
 

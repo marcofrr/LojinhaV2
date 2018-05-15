@@ -9,18 +9,20 @@ namespace LojinhaV2.Models
 {
     public class Encomendas
     {
-        public Encomendas(){
+        public Encomendas() {
             ListaDeDetalhes = new HashSet<Detalhes>();
 
         }
         [Key]
-        public int Encomenda_id { get; set; }
+        public int EncomendaId { get; set; }
         public int Quantidade { get; set; }
-        public DateTime Data_encomenda { get; set; }
-        
-        public string Tipo_pagamento { get; set; }
-        
-        public string Endereco_envio { get; set; }
+        public DateTime DataEncomenda { get; set; }
+
+        public string TipoPagamento { get; set; }
+
+        public string EnderecoEnvio { get; set; }
+
+        public string CodigoPostal {get; set; }
 
         ////Foreign Keys
         ////nome da tabela
@@ -29,7 +31,7 @@ namespace LojinhaV2.Models
         //public virtual Encomendas_status Encomendas_status { get; set; }
 
         [ForeignKey("Cliente")]
-        public int Cliente_id { get; set; }
+        public int ClienteId { get; set; }
         public virtual Cliente Cliente { get; set; }
 
         //uma encomenda pode envolver vários Detalhes,items

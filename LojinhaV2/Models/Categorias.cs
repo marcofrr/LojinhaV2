@@ -13,11 +13,11 @@ namespace LojinhaV2.Models
             ListaDeProdutos = new HashSet<Produtos>();
         }
         [Key]
-        public int Categoria_id { get; set; }
+        public int CategoriaId { get; set; }
 
-        public string Categoria_desc { get; set; }
+        public string CategoriaDesc { get; set; }
 
-        public string Categoria_img { get; set; }
+        public string CategoriaImg { get; set; }
 
         public virtual ICollection<Produtos> ListaDeProdutos { get; set; }
     }

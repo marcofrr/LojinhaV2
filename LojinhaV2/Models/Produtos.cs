@@ -16,24 +16,21 @@ namespace LojinhaV2.Models
 
         }
         [Key]
-        public int Produto_id { get; set; }
+        public int nSerie { get; set; }
 
-        public string Produto_nome { get; set; }
+        public string ProdutoNome { get; set; }
 
-        public float Produto_preco { get; set; }
+        public decimal ProdutoPreco { get; set; }
 
-        public int Produto_garantia { get; set; }
+        public int? ProdutoGarantia { get; set; }
 
-        public string Produto_desc { get; set; }
+        public string ProdutoDesc { get; set; }
 
-        public string Produto_img { get; set; }
+        public string ProdutoImg { get; set; }
 
         public int Quantidade { get; set; }
 
-        [ForeignKey("Categorias")]
-        public int Categoria_id { get; set; }
-        public virtual Categorias Categorias { get; set; }
-
+        public int Iva { get; set;  }
         /// <summary>
         /// Um item pode estar associado a uma lista de Encomendas
         /// </summary>
