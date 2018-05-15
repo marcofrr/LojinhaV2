@@ -10,14 +10,21 @@ namespace LojinhaV2.Models
 {
     public class AppDB : DbContext
     {
-        public AppDB() : base("AppDBConnectionString")
+        public AppDB() : base("AppDbConnectionString")
         { }
 
 
         // identificar as tabelas da base de dados
         public virtual DbSet<Encomendas> Encomendas { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
-        public virtual DbSet<Encomendas_status> Encomendas_status { get; set; }
+
+        public virtual DbSet<Reviews> Reviews { get; set; }
+        public virtual DbSet<Categorias> Categorias { get; set; }
+
+        public virtual DbSet<Produtos> Produtos { get; set;  }
+
+        public virtual DbSet<Detalhes> Detalhes { get; set; }
+
 
 
 

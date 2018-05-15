@@ -9,6 +9,11 @@ namespace LojinhaV2.Models
 {
     public class Cliente
     {
+        public Cliente()
+        {
+            ListaDeEncomendas = new HashSet<Encomendas>();
+            ListaDeReviews = new HashSet<Reviews>();
+        }
         [Key]
         public int Cliente_id { get; set; }
 
@@ -31,6 +36,9 @@ namespace LojinhaV2.Models
         // complementar a informação sobre o relacionamento
         // um cliente terá uma lista de encomendas e uma lista de reviews
         public virtual ICollection<Encomendas> ListaDeEncomendas { get; set; }
+
+        //um cliente terá uma lista de reviews
+        public virtual ICollection<Reviews> ListaDeReviews { get; set; }
 
 
     }
